@@ -19,3 +19,6 @@ DB_PORT=5432
 `docker-compose --profile apply_migrations up -d --build` - применение миграций
 
 `docker-compose --profile backend up -d --build` - запуск проекта
+
+3) Перейти по ссылке `http://127.0.0.1/admin/`
+4) API-эндпоинт находится по ссылке: `http://127.0.0.1/api/hotels`
