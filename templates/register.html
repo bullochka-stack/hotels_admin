@@ -1,0 +1,32 @@
+{% extends 'admin/base_site.html' %}
+
+
+{% block content %}
+    <h2>Регистрация</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-row">
+            {{ form.username.errors }}
+            {{ form.username.label_tag }} {{ form.username }}
+        </div>
+        <p></p>
+        <div class="form-row">
+            {{ form.email.errors }}
+            {{ form.email.label_tag }} {{ form.email }}
+        </div>
+        <p></p>
+        <div class="form-row">
+            {{ form.password1.errors }}
+            {{ form.password1.label_tag }} {{ form.password1 }}
+        </div>
+        <p></p>
+        <div class="form-row">
+            {{ form.password2.errors }}
+            {{ form.password2.label_tag }} {{ form.password2 }}
+        </div>
+        <p></p>
+        <div class="submit-row">
+            <input type="submit" value="Зарегистрироваться">
+        </div>
+    </form>
+{% endblock %}
